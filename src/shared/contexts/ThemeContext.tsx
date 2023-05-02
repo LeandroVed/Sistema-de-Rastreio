@@ -1,5 +1,13 @@
 import React from 'react'
-import { ReactNode, createContext, useCallback, useContext, useMemo, useState } from "react"
+import { 
+    ReactNode, 
+    createContext, 
+    useCallback, 
+    useContext, 
+    useMemo, 
+    useState 
+} 
+from "react"
 import { DarkTheme, LightTheme } from "../themes"
 import { Box, ThemeProvider } from "@mui/material"
 
@@ -34,7 +42,11 @@ export const AppThemeProvider: React.FC<IThemeProviderProps> = ({ children }) =>
     return(
         <ThemeContext.Provider value={{ themeName, toggleTheme }}>
             <ThemeProvider theme={ theme }>
-            <Box width="100vw" height="100vh" bgcolor={ theme.palette.background.default } >
+            <Box 
+                width="100vw" 
+                height="100vh" 
+                bgcolor={ theme.palette.background.default } 
+            >
                 { children }
             </Box>
         </ThemeProvider>
